@@ -31,7 +31,8 @@ set	$left	h
 set	$down	j
 set	$up	k
 set	$right	l
-
+set	$gapsi	25
+set	$gapso	10
 
 #==========================================================================
 # Style
@@ -110,28 +111,34 @@ bindsym $mod+Shift+Up 		move up
 bindsym $mod+Shift+Right 	move right
 
 # toggle split orientation 
-bindsym $mod+t split toggle
+bindsym $mod+t 			split toggle
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+f 			fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s 			layout stacking
+bindsym $mod+m			layout tabbed
+bindsym $mod+b 			layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space 	floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+space 		focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+a 			focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+Shift+a 		focus child
 
+
+
+#==========================================================================
+# Workspace Management
+#
+#==========================================================================
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -146,35 +153,115 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+bindsym $mod+F1 workspace 11
+bindsym $mod+F2 workspace 12
+bindsym $mod+F3 workspace 13
+bindsym $mod+F4 workspace 14
+bindsym $mod+F5 workspace 15
+bindsym $mod+F6 workspace 16
+bindsym $mod+F7 workspace 17
+bindsym $mod+F8 workspace 18
+bindsym $mod+F9 workspace 19
+bindsym $mod+F10 workspace 20
+bindsym $mod+F11 workspace 21
+bindsym $mod+F12 workspace 22
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+F1 move container to workspace 11
+bindsym $mod+Shift+F2 move container to workspace 12
+bindsym $mod+Shift+F3 move container to workspace 13
+bindsym $mod+Shift+F4 move container to workspace 14
+bindsym $mod+Shift+F5 move container to workspace 15
+bindsym $mod+Shift+F6 move container to workspace 16
+bindsym $mod+Shift+F7 move container to workspace 17
+bindsym $mod+Shift+F8 move container to workspace 18
+bindsym $mod+Shift+F9 move container to workspace 19
+bindsym $mod+Shift+F10 move container to workspace 20
+bindsym $mod+Shift+F11 move container to workspace 21
+bindsym $mod+Shift+F12 move container to workspace 22
 
+# move focused container and move to that workspace
+bindsym $mod+Shift+Control+1 move container to workspace 1; workspace 1
+bindsym $mod+Shift+Control+2 move container to workspace 2; workspace 2
+bindsym $mod+Shift+Control+3 move container to workspace 3; workspace 3
+bindsym $mod+Shift+Control+4 move container to workspace 4; workspace 4
+bindsym $mod+Shift+Control+5 move container to workspace 5; workspace 5
+bindsym $mod+Shift+Control+6 move container to workspace 6; workspace 6
+bindsym $mod+Shift+Control+7 move container to workspace 7; workspace 7
+bindsym $mod+Shift+Control+8 move container to workspace 8; workspace 8
+bindsym $mod+Shift+Control+9 move container to workspace 9; workspace 9
+bindsym $mod+Shift+Control+0 move container to workspace 10; workspace 10
+bindsym $mod+Shift+Control+F1 move container to workspace 11; workspace 11
+bindsym $mod+Shift+Control+F2 move container to workspace 12; workspace 12
+bindsym $mod+Shift+Control+F3 move container to workspace 13; workspace 13
+bindsym $mod+Shift+Control+F4 move container to workspace 14; workspace 14
+bindsym $mod+Shift+Control+F5 move container to workspace 15; workspace 15
+bindsym $mod+Shift+Control+F6 move container to workspace 16; workspace 16
+bindsym $mod+Shift+Control+F7 move container to workspace 17; workspace 17
+bindsym $mod+Shift+Control+F8 move container to workspace 18; workspace 18
+bindsym $mod+Shift+Control+F9 move container to workspace 19; workspace 19
+bindsym $mod+Shift+Control+F10 move container to workspace 20; workspace 20
+bindsym $mod+Shift+Control+F11 move container to workspace 21; workspace 21
+bindsym $mod+Shift+Control+F12 move container to workspace 22; workspace 22
+
+# tab tab tab
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab move container to workspace back_and_forth
+bindsym $mod+Shift+Control+Tab move container to workspace back_and_forth; workspace back_and_forth
+
+# move left and right
+bindsym $mod+Shift+n workspace prev
+bindsym $mod+Shift+m workspace next
+
+# Multi display: move workspace
+bindsym $mod+x move workspace to output right
+bindsym $mod+Shift+x move workspace to output left
+
+#==========================================================================
+# i3 Management
+#
+#==========================================================================
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+
+#==========================================================================
+# Resizing Windows and Gaps
+#
+#==========================================================================
+# no gap and reset gap
+bindsym $mod+Shift+t gaps inner current set 0; gaps outer current set 0
+bindsym $mod+Shift+g gaps inner current set $gapsi; gaps outer current set $gapsO
+
+# fast resize
+bindsym $mod+y resize shrink width 5 px or 5 ppt
+bindsym $mod+u resize grow height 5 px or 5 ppt
+bindsym $mod+i resize shrink height  5 px or 5 ppt
+bindsym $mod+o resize grow width 5 px or 5 ppt
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -205,6 +292,30 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command i3status
-#}
+bar {
+        status_command i3status
+}
+
+
+
+#==========================================================================
+# Program Bindings
+#
+#==========================================================================
+# discord
+bindsym $mod+Shift+d exec discord
+
+# chromium
+bindsym $mod+Shift+w exec $BROWSER
+
+
+#==========================================================================
+# Autostart
+#
+#==========================================================================
+# wallpaper
+exec xwallpaper --zoom /home/tsu/Downloads/D4OfM_jVUAEf8oJ.png
+
+# transparency forsenCD
+exec xcompmgr -c
+
