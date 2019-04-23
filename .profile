@@ -21,3 +21,4 @@ export BROWSER="chromium"
 
 
 alias config='/usr/bin/git --git-dir=/home/tsu/.cfg/ --work-tree=/home/tsu'
+export GPG_TTY=$(tty)
