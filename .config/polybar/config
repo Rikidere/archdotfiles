@@ -33,7 +33,7 @@ width = 100%
 height = 35
 offset-x = 0
 ;offset-y = -1
-radius = 6.0
+;radius = 6.0
 fixed-center = false
 
 background = #5a000000
@@ -42,7 +42,7 @@ foreground = #eee
 line-size = 2
 line-color = #f00
 
-border-size = 1
+border-size = 0
 border-color = #00000000
 
 padding-left = 0
@@ -299,7 +299,7 @@ label-muted =   muted
 label-muted-foreground = #aaa
 format-volume-padding = 3
 format-muted-padding = 3
-
+click-left = st
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
