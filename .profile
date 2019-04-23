@@ -19,5 +19,4 @@ export BROWSER="chromium"
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx 
 
 
-
-alias config='/usr/bin/git --git-dir=/home/tsu/.cfg/ --work-tree=/home/tsu'
+export GPG_TTY=$(tty)
