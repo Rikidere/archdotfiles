@@ -1,0 +1,98 @@
+st.font: Ubuntu Mono derivative Powerline:pixelsize=16
+*.font: Inconsolata Nerd Font Complete:pixelsize=16
+
+XTerm.vt100.faceName: Inconsolata for Powerline:size=10:antialias=false
+XTerm.vt100.font: 7x13
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+!#define S_base03        #fdf6e3
+!#define S_base02        #eee8d5
+!#define S_base01        #93a1a1
+!#define S_base00        #839496
+!#define S_base0         #657b83
+!#define S_base1         #586e75
+!#define S_base2         #073642
+!#define S_base3         #002b36
+
+*.background:              S_base03
+*.foreground:              S_base0
+*.fading:                  40
+*.fadeColor:               S_base03
+*.cursorColor:             S_base1
+*.pointerColorBackground:  S_base01
+*.pointerColorForeground:  S_base1
+
+*.color0:                  S_base02
+*.color1:                  S_red
+*.color2:                  S_green
+*.color3:                  S_yellow
+*.color4:                  S_blue
+*.color5:                  S_magenta
+*.color6:                  S_cyan
+*.color7:                  S_base2
+*.color9:                  S_orange
+*.color8:                  S_base03
+*.color10:                 S_base01
+*.color11:                 S_base00
+*.color12:                 S_base0
+*.color13:                 S_violet
+*.color14:                 S_base1
+*.color15:                 S_base3
+
+!! black dark/light
+!! st.color0: #424242
+!! st.color8: #5d5d5d
+
+!! red dark/light
+!! st.color1: #dc322f
+!! st.color9: #cb4b16
+!00212a
+
+!! green dark/light
+!! st.color2: #54ff54
+!!*color2: #000000
+
+!! st.color10: #4a8b4a
+
+!! yellow dark/light
+!! st.color3: #b58900
+!! st.color11: #657b83
+
+!! blue dark/light
+!! st.color4: #ccf9ee
+!! st.color12: #54ffff 
+
+!! magenta dark/light
+!! st.color5: #d33682
+!! st.color13: #6c71c4
+
+!! cyan dark/light
+!!st.color6: #2aa198
+!!st.color14: #93a1a1
+
+!! white dark/light
+!!st.color7: #607f67
+!!st.color15: #fdf6e3
+
+!!st.background: #000000
+!!st.foreground: #ffffff
+!!st.cursorColor: #657b83
+
+!! gruvbox:
