@@ -31,14 +31,14 @@ set	$left	h
 set	$down	j
 set	$up	k
 set	$right	l
-set	$gapsi	25
-set	$gapso	10
+set	$gapsi	15
+set	$gapso	15
+
 
 #==========================================================================
 # Style
 #
 #==========================================================================
-
 # class				value
 #font pango:monospace 8
 font 				pango:DejaVu Sans Mono 8
@@ -47,12 +47,12 @@ font 				pango:DejaVu Sans Mono 8
 floating_modifier 		$mod
 
 # Gaps
-gaps inner 			25 
-gaps outer 			10
+gaps inner 			$gapsi 
+gaps outer 			$gapso
 
 # for_window 
 for_window [class="^.*"] 	border pixel 2
-
+for_window [class="floatingTerm"] floating enable
 # Colors (credits github/gaawa) //TODO
 #			border	backgr.	text	indicator child_border
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #009900
@@ -64,13 +64,39 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #misc
 popup_during_fullscreen		leave_fullscreen
 
+
+#==========================================================================
+# Autostart
+#
+#==========================================================================
+# wallpaper
+exec --no-startup-id xwallpaper --zoom /home/tsu/Downloads/D4OfM_jVUAEf8oJ.png
+
+# transparency forsenCD
+exec --no-startup-id compton -CG
+
+# polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# terminal
+assign [class="st"] 1
+exec --no-startup-id $TERMINAL
+# chromium 
+assign [class="Chromium"] 2
+exec --no-startup-id chromium 
+
+# discord
+assign [class="discord"] 3
+exec --no-startup-id discord
+
+
 #==========================================================================
 # Basic Bindings
 #
 #==========================================================================
 # start a terminal
 bindsym $mod+Return 	exec --no-startup-id $TERMINAL
-
+bindsym $mod+Shift+Return exec --no-startup-id $TERMINAL -c floatingTerm
 # kill focused window
 bindsym $mod+Shift+q 	kill
 
@@ -255,7 +281,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #==========================================================================
 # no gap and reset gap
 bindsym $mod+Shift+t gaps inner current set 0; gaps outer current set 0
-bindsym $mod+Shift+g gaps inner current set $gapsi; gaps outer current set $gapsO
+bindsym $mod+Shift+g gaps inner current set $gapsi; gaps outer current set $gapso
 
 # fast resize
 bindsym $mod+y resize shrink width 5 px or 5 ppt
@@ -292,9 +318,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+#        status_command i3status
+#}
 
 
 
@@ -308,14 +334,4 @@ bindsym $mod+Shift+d exec discord
 # chromium
 bindsym $mod+Shift+w exec $BROWSER
 
-
-#==========================================================================
-# Autostart
-#
-#==========================================================================
-# wallpaper
-exec xwallpaper --zoom /home/tsu/Downloads/D4OfM_jVUAEf8oJ.png
-
-# transparency forsenCD
-exec xcompmgr -c
 

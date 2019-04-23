@@ -4,6 +4,45 @@ st.font: Ubuntu Mono derivative Powerline:pixelsize=16
 XTerm.vt100.faceName: Inconsolata for Powerline:size=10:antialias=false
 XTerm.vt100.font: 7x13
 
+! black dark/light
+st.color0: #424242
+st.color8: #5d5d5d
+
+! red dark/light
+st.color1: #dc322f
+st.color9: #cb4b16
+!00212a
+
+! green dark/light
+st.color2: #54ff54
+!!*color2: #000000
+
+st.color10: #4a8b4a
+
+! yellow dark/light
+st.color3: #b58900
+st.color11: #657b83
+
+! blue dark/light
+st.color4: #ccf9ee
+st.color12: #54ffff 
+
+! magenta dark/light
+st.color5: #d33682
+st.color13: #6c71c4
+
+! cyan dark/light
+st.color6: #2aa198
+st.color14: #93a1a1
+
+! white dark/light
+st.color7: #607f67
+st.color15: #fdf6e3
+
+st.background: #000000
+st.foreground: #18f018
+st.cursorColor: #657b83
+ 
 #define S_yellow        #b58900
 #define S_orange        #cb4b16
 #define S_red           #dc322f
@@ -55,44 +94,3 @@ XTerm.vt100.font: 7x13
 *.color13:                 S_violet
 *.color14:                 S_base1
 *.color15:                 S_base3
-
-!! black dark/light
-!! st.color0: #424242
-!! st.color8: #5d5d5d
-
-!! red dark/light
-!! st.color1: #dc322f
-!! st.color9: #cb4b16
-!00212a
-
-!! green dark/light
-!! st.color2: #54ff54
-!!*color2: #000000
-
-!! st.color10: #4a8b4a
-
-!! yellow dark/light
-!! st.color3: #b58900
-!! st.color11: #657b83
-
-!! blue dark/light
-!! st.color4: #ccf9ee
-!! st.color12: #54ffff 
-
-!! magenta dark/light
-!! st.color5: #d33682
-!! st.color13: #6c71c4
-
-!! cyan dark/light
-!!st.color6: #2aa198
-!!st.color14: #93a1a1
-
-!! white dark/light
-!!st.color7: #607f67
-!!st.color15: #fdf6e3
-
-!!st.background: #000000
-!!st.foreground: #ffffff
-!!st.cursorColor: #657b83
-
-!! gruvbox:
