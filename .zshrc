@@ -119,6 +119,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-PURE_POWER_MODE=fancy
-#source ~/.purepower
-#source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+alias config='/usr/bin/git --git-dir=/home/tsu/.cfg/ --work-tree=/home/tsu'
